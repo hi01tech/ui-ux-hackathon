@@ -3,92 +3,80 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className=" justify-items-centercenter ">
-       <div className="border-gray-500 container mx-auto py-14   ml-12 mr-0 px-12">
-       <div className="grid md:grid-cols-12 grid-cols-1 gap-6">
-
-        {/* Logo */}
-        <div className="lg:col-span-4 col-span-12">
-         <Image
-            className="pt-3 pb-9"
-            src="/Funiro.png"
-            alt="Next.js logo"
-            width={100}
-            height={38}
-            priority
-          />
-
-          {/*  */}
-          <div className="mt-6 text-zinc-400">
-            <p>400 University Drive Suite 200 Coral</p>
-            <p>Globes.</p>
-            <p>FL 33134 USA.</p>
-          </div> 
-        </div>
-         {/* links */}
-        <div className="lg:col-span-2 md:col-span-4 col-span-12 ">
-        
-           <h4 className="text-zinc-400 tracking-wider mt-2 mb-12">Links</h4>
-            <ul className=" list-none mt-6  space-y-2  text-black font-normal ">
-              <li className="mb-12 tracking-tight  hover:text-zinc-500 transition-all duration-300 ease-in-out ">
-                <Link href="/">Home</Link>
-              </li>
-
-              <li  className="mb-12  tracking-tight hover:text-zinc-500 transition-all duration-300 ease-in-out">
-                <Link href="/shop">Shop</Link>
-              </li>
-
-              <li  className="mb-11 tracking-tight hover:text-zinc-500 transition-all duration-300 ease-in-out">
-                <Link href="/about">About</Link>
-              </li>
-
-              <li  className="tracking-tight hover:text-zinc-500 transition-all duration-300 ease-in-out">
-                <Link href="/contact">Contact</Link>
-              </li>
-            </ul>
-           
-        </div>
-        {/* help */}
-        <div className="lg:col-span-2 md:col-span-4 col-span-12 ">
-        <h2 className="text-zinc-400 tracking-wide  mt-2 mb-12 ">Help</h2>
-            <ul className="list-none mt-6  space-y-2  text-black font-normal">
-              <li className=" mb-11 tracking-tight  hover:text-zinc-500 transition-all duration-300 ease-in-out ">
-                <Link href="/payment">Payment Option</Link>
-              </li>
-
-              <li  className="mb-11 tracking-tight hover:text-zinc-500 transition-all duration-300 ease-in-out ">
-                <Link href="/cash">Return</Link>
-              </li>
-
-              <li  className=" tracking-tight hover:text-zinc-500 transition-all duration-300 ease-in-out ">
-                <Link href="/policy">Privacy Policies</Link>
-              </li>
-            </ul>
-        </div>
-        
-        {/* Newsletter */}
-        <div className="lg:col-span-2 md:col-span-4 col-span-12 ">
-          <h3 className="text-zinc-400 tracking-wide  mt-1 mb-12">Newsletter</h3>
-          <div className="flex  gap-x-7 text-black pt-3 font-normal">
-            <input
-              className="text-zinc-400 b-2  underline decoration-black "
-              placeholder="Enter your Email adress"
+    <footer className="py-8 border-t-[1px]  border-[#0000002B] max-w-screen-2xl mx-auto ">
+      <div className="container  px-7 md:px-5 lg:px-6 ">
+        <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-4 gap-2 ">
+         
+            {/* logo section */}
+          <div className="">
+            <Image
+              className="pt-3 pb-9"
+              src="/Funiro.png"
+              alt="Next.js logo"
+              width={100}
+              height={38}
+              priority       
             />
-            <button className="  hover:text-yellow-600 transition-all duration-300 ease-in-out underline ">SUBSCRIBE</button>
+
+            {/* description */}
+            <div className="mt-6 text-zinc-400 mb-4">
+              <p>400 University Drive Suite 200 Coral</p>
+              <p>Globes.</p>
+              <p>FL 33134 USA.</p>
+            </div>
+          </div>
+
+          {/* links */}
+          <div className="flex flex-col md:items-center mb-2 ">  
+            <h4 className=" text-[#9F9F9F] tracking-wider mt-3 mb-10 md:items-center text-left text-base font-medium">Links</h4>
+            <div className="flex flex-col mt-4  space-y-5 lg:space-y-11">
+              <Link href="/">Home</Link>
+              <Link href="/shop">Shop</Link>
+              <Link href="/blog">Blog</Link>
+              <Link href="/contact">Contact</Link>
+            </div>
+          </div>
+
+          {/* Help */}
+          <div className="flex flex-col mb-2 ">
+            <h2 className="text-[#9F9F9F] tracking-wider mt-3 mb-10 md:items-center text-left text-base font-medium  ">Help</h2>
+            <div className="flex flex-col mt-4  space-y-5 lg:space-y-11">
+              <Link href="/payment">Payment Option</Link>
+              <Link href="/cash">Return</Link>
+              <Link href="/policy">Privacy Policies</Link>
+            </div>
+          </div>
+
+          {/* Newsletter*/}
+          <div className="mb-20 ">
+            <h3 className="    text-[#9F9F9F] tracking-wider mt-3 mb-10 md:items-center text-left text-base font-medium ">
+              Newsletter
+            </h3>
+            <form className="flex flex-row items-center justify-left ">
+              <input
+                type="email"
+                placeholder="Enter Your Email Address"
+                required
+
+                className="text-black/60  pl-2 border-b border-black/75 text-left  mr-3 pb-2 w-full md:w-48 lg:w-full b-2 flex  gap-x-7  pt-3 font-normal tracking-tighter "
+              />
+              <button
+                type="submit"
+                className="  hover:text-yellow-600 transition-all duration-300 ease-in-out text-left py-2 border-black/40 mr-3 pb-2  border-b-2 flex  gap-x-7  pt-3 font-normal "   
+              >
+                SUBSCRIBE
+              </button>
+            </form>
           </div>
         </div>
-    
-       </div>
-       </div>
-       <hr className="bg-gray-200 w-[1349px] py-[0.75px]  " />
-
-       <div className= " my-3  py-7 ml-12 mr-40 px-12">
-        <hr className="bg-slate-200 w-[1180px] h-[0.45] mt-6 mb-4" />
-       <p >
-       2023 furino. All rights reversed
-       </p>
-      </div>
       
+
+          {/* last div */}
+        <div className=" flex flex-row mt-8  border-[#D9D9D9] pt-4  border-t-[1px]  top-[408x] left-[100px] ">
+   
+          <p>2023 furino. All rights reverved</p>
+        </div>
+      </div>
     </footer>
   );
 }
